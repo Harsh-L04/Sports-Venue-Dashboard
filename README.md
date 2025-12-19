@@ -1,64 +1,99 @@
-# Sports Venue Dashboard
+# 🏟️ Sports Venue Dashboard
 
-A dashboard application for analyzing business metrics and revenue data of a sports venue platform.  
-Built as part of a coding assignment with a focus on clean data modeling, accurate analytics, and a professional UI.
+A modern analytics dashboard for monitoring business performance and revenue metrics across a sports venue platform.  
+Built as a coding assignment with a strong emphasis on **clean data modeling**, **accurate analytics**, and a **professional admin-style UI**.
 
 ---
 
 ## 🚀 Live Demo
 
-👉 <PASTE YOUR DEPLOYED VERCEL URL HERE>
+👉 https://sports-venue-dashboard.vercel.app/
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
-- React
-- Vite
-- TypeScript
-- Tailwind CSS
-- React Query
-- Recharts
-- Lucide Icons
+- **React**
+- **Vite**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Query**
+- **Recharts**
+- **Lucide Icons**
 
 ### Backend / Database
-- Supabase (PostgreSQL)
-- Supabase JavaScript Client
-- SQL (for schema and seed data)
+- **Supabase** (PostgreSQL)
+- **Supabase JavaScript Client**
+- **SQL** (schema design & seed data)
 
 ### Deployment
-- Vercel (Frontend)
-- Supabase (Database & API)
+- **Vercel** (Frontend)
+- **Supabase** (Database & API)
 
 ---
 
 ## 📊 Features
 
-- Business KPI dashboard
-- Total, booking, and coaching revenue analytics
+### Business KPIs
+- Total revenue
+- Booking revenue
+- Coaching revenue
+
+### Membership Analytics
 - Active vs inactive members
-- Trial users and conversion tracking
+- Trial users
+- Trial-to-paid conversion tracking
+
+### Booking Insights
+- Total bookings
 - Cancelled bookings count
-- Refunded / disputed transactions tracking
+
+### Transaction Monitoring
+- Refunded transactions
+- Disputed payments
+
+### Venue Performance
 - Revenue grouped by venue (bar chart)
-- Clean, professional admin-style UI
+
+### UI / UX
+- Clean, professional admin-style dashboard
+- Responsive layout
+- Clear, readable data visualizations
 
 ---
 
 ## 🧱 Database Schema
 
-The application uses the following core tables:
+The application uses a relational PostgreSQL schema designed for analytics and reporting.
 
+### Core Tables
 - `venues`
 - `members`
 - `bookings`
 - `transactions`
 
-Relationships are enforced using foreign keys and UUID primary keys.  
-Row Level Security (RLS) is enabled with public read-only access for dashboard queries.
+### Schema Highlights
+- UUID primary keys
+- Enforced foreign key relationships
+- Normalized structure for accurate reporting
+- Designed for efficient aggregation and analytics queries
 
 ---
 
-## 📡 Data Flow
+## 🔐 Security
 
+- Row Level Security (RLS) enabled
+- Public **read-only** access for dashboard queries
+- Write operations restricted at the database level
+
+---
+
+## 📦 Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
