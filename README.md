@@ -22,14 +22,16 @@ Built as a coding assignment with a strong emphasis on **clean data modeling**, 
 - **Recharts**
 - **Lucide Icons**
 
-### Backend / Database
-- **Supabase** (PostgreSQL)
-- **Supabase JavaScript Client**
+### Database
+- **PostgreSQL**
 - **SQL** (schema design & seed data)
+
+### Backend
+- **NodeJS**
+- **ExpressJS** 
 
 ### Deployment
 - **Vercel** (Frontend)
-- **Supabase** (Database & API)
 
 ---
 

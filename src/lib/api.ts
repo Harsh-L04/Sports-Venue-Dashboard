@@ -58,7 +58,7 @@ export async function fetchDashboardMetrics(): Promise<DashboardMetrics> {
 
   const trialConversionRate =
     trialUsers && trialUsers > 0
-      ? Number(((convertedTrials || 0) / trialUsers) * 100).toFixed(2)
+      ? Math.round(((convertedTrials || 0) / trialUsers) * 10000) / 100
       : 0;
 
   // Cancelled bookings
@@ -79,6 +79,7 @@ export async function fetchDashboardMetrics(): Promise<DashboardMetrics> {
     .select(`
       amount,
       bookings (
+        booking_id,
         venues ( name )
       )
     `)
@@ -97,6 +98,9 @@ export async function fetchDashboardMetrics(): Promise<DashboardMetrics> {
   const revenueByVenue = Object.entries(revenueMap).map(
     ([venue, revenue]) => ({ venue, revenue })
   );
+  console.log("revenueRows:", revenueRows);
+  console.log("venueRevenueRows:", venueRevenueRows);
+
 
   return {
     totalRevenue,
